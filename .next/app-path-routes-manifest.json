@@ -1,0 +1,16 @@
+{
+  "/[locale]/allergy/page": "/[locale]/allergy",
+  "/[locale]/aqi-guide/page": "/[locale]/aqi-guide",
+  "/[locale]/cities/[slug]/page": "/[locale]/cities/[slug]",
+  "/[locale]/cities/page": "/[locale]/cities",
+  "/[locale]/page": "/[locale]",
+  "/[locale]/states/[state]/page": "/[locale]/states/[state]",
+  "/[locale]/states/page": "/[locale]/states",
+  "/[locale]/unhealthy/page": "/[locale]/unhealthy",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/page": "/",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml"
+}

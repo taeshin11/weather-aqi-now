@@ -1,0 +1,131 @@
+{
+  "levels": [
+    {
+      "range": "0-50",
+      "category": "Good",
+      "color": "#bbf7d0",
+      "textColor": "#166534",
+      "description": "Air quality is considered satisfactory, and air pollution poses little or no risk.",
+      "healthImplications": "None. Air quality is satisfactory.",
+      "cautionaryStatement": "None",
+      "outdoorActivity": "Great day to be active outside!",
+      "sensitiveGroups": "No restrictions",
+      "icon": "check-circle"
+    },
+    {
+      "range": "51-100",
+      "category": "Moderate",
+      "color": "#fef9c3",
+      "textColor": "#854d0e",
+      "description": "Air quality is acceptable. However, there may be a moderate health concern for a very small number of people who are unusually sensitive to air pollution.",
+      "healthImplications": "Active children and adults, and people with respiratory disease, such as asthma, should limit prolonged outdoor exertion.",
+      "cautionaryStatement": "Unusually sensitive people should consider limiting prolonged outdoor exertion.",
+      "outdoorActivity": "Moderate outdoor activity is fine for most people.",
+      "sensitiveGroups": "Unusually sensitive individuals",
+      "icon": "alert-circle"
+    },
+    {
+      "range": "101-150",
+      "category": "Unhealthy for Sensitive Groups",
+      "color": "#fed7aa",
+      "textColor": "#9a3412",
+      "description": "Members of sensitive groups may experience health effects. The general public is not likely to be affected.",
+      "healthImplications": "Children, active adults, and people with respiratory disease should limit prolonged outdoor exertion.",
+      "cautionaryStatement": "People with heart or lung disease, older adults, and children should limit prolonged outdoor exertion.",
+      "outdoorActivity": "Sensitive groups should limit time outdoors.",
+      "sensitiveGroups": "People with heart/lung disease, older adults, children",
+      "icon": "alert-triangle"
+    },
+    {
+      "range": "151-200",
+      "category": "Unhealthy",
+      "color": "#fecaca",
+      "textColor": "#991b1b",
+      "description": "Everyone may begin to experience health effects; members of sensitive groups may experience more serious health effects.",
+      "healthImplications": "Everyone may experience health effects. Members of sensitive groups may experience more serious effects.",
+      "cautionaryStatement": "Active children and adults should avoid prolonged outdoor exertion. People with respiratory disease should avoid outdoor exertion.",
+      "outdoorActivity": "Avoid prolonged outdoor exertion. Move activities indoors.",
+      "sensitiveGroups": "Everyone is affected",
+      "icon": "x-circle"
+    },
+    {
+      "range": "201-300",
+      "category": "Very Unhealthy",
+      "color": "#e9d5ff",
+      "textColor": "#6b21a8",
+      "description": "Health alert: everyone may experience more serious health effects.",
+      "healthImplications": "Serious health effects. Everyone should avoid outdoor exertion.",
+      "cautionaryStatement": "Everyone should avoid outdoor exertion. If you must be outdoors, wear an N95 mask.",
+      "outdoorActivity": "Stay indoors. Avoid all outdoor activities.",
+      "sensitiveGroups": "Everyone is at serious risk",
+      "icon": "skull"
+    },
+    {
+      "range": "301+",
+      "category": "Hazardous",
+      "color": "#fca5a5",
+      "textColor": "#7f1d1d",
+      "description": "Health warning of emergency conditions. The entire population is more likely to be affected.",
+      "healthImplications": "Emergency conditions. Entire population is likely affected.",
+      "cautionaryStatement": "Everyone should avoid all outdoor exertion. Remain indoors with windows closed. Wear N95 masks if you must go outside.",
+      "outdoorActivity": "Do not go outside. Emergency health warning.",
+      "sensitiveGroups": "Emergency conditions for everyone",
+      "icon": "biohazard"
+    }
+  ],
+  "pollutants": [
+    {
+      "id": "pm25",
+      "name": "PM2.5",
+      "fullName": "Fine Particulate Matter",
+      "unit": "μg/m³",
+      "description": "Tiny particles 2.5 micrometers or smaller that can penetrate deep into the lungs and even enter the bloodstream.",
+      "sources": "Vehicle emissions, industrial processes, wildfires, cooking",
+      "healthEffects": "Respiratory and cardiovascular disease, lung cancer"
+    },
+    {
+      "id": "pm10",
+      "name": "PM10",
+      "fullName": "Coarse Particulate Matter",
+      "unit": "μg/m³",
+      "description": "Particles between 2.5 and 10 micrometers that can be inhaled into the lungs.",
+      "sources": "Dust, pollen, mold, construction sites",
+      "healthEffects": "Respiratory irritation, aggravated asthma"
+    },
+    {
+      "id": "o3",
+      "name": "O₃",
+      "fullName": "Ground-level Ozone",
+      "unit": "ppb",
+      "description": "A gas formed when sunlight reacts with pollutants from vehicles and industries. Not to be confused with the beneficial ozone layer.",
+      "sources": "Chemical reaction between sunlight and vehicle/industrial emissions",
+      "healthEffects": "Respiratory tract irritation, reduced lung function, asthma"
+    }
+  ],
+  "faq": [
+    {
+      "question": "What is AQI?",
+      "answer": "AQI stands for Air Quality Index. It is a standardized system developed by the EPA to communicate how clean or polluted the air is and what associated health effects might be a concern for the public."
+    },
+    {
+      "question": "How is AQI calculated?",
+      "answer": "AQI is calculated based on measurements of five major air pollutants: ground-level ozone, particulate matter (PM2.5 and PM10), carbon monoxide, sulfur dioxide, and nitrogen dioxide. The highest individual pollutant AQI becomes the overall AQI value."
+    },
+    {
+      "question": "What AQI level is safe?",
+      "answer": "An AQI of 0-50 is considered Good and safe for everyone. AQI 51-100 is Moderate and generally safe, though unusually sensitive people should be cautious. AQI above 100 may pose health risks for sensitive groups."
+    },
+    {
+      "question": "Who is most affected by poor air quality?",
+      "answer": "People with respiratory conditions (asthma, COPD), heart disease, older adults, children, pregnant women, and those exercising outdoors are most vulnerable to poor air quality."
+    },
+    {
+      "question": "What can I do to protect myself on high AQI days?",
+      "answer": "Stay indoors with windows closed, use air purifiers with HEPA filters, wear N95 masks if you must go outside, avoid strenuous outdoor exercise, and check the AQI forecast before planning outdoor activities."
+    },
+    {
+      "question": "What causes high AQI levels?",
+      "answer": "Major causes include vehicle emissions, industrial pollution, wildfires, agricultural burning, power plants, and weather conditions that trap pollutants near ground level."
+    }
+  ]
+}

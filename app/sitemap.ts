@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const cities = getAllCities();
   const states = getAllStates();
 
-  const staticPages = ["", "/cities", "/states", "/aqi-guide", "/unhealthy", "/allergy"];
+  const staticPages = ["", "/cities", "/states", "/aqi-guide", "/unhealthy", "/allergy", "/about", "/how-to-use", "/privacy", "/terms"];
 
   const staticEntries = locales.flatMap((locale) =>
     staticPages.map((page) => ({

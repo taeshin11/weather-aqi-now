@@ -5,6 +5,9 @@ import CityTable from "../../components/CityTable";
 import CitySearch from "../../components/CitySearch";
 import type { Metadata } from "next";
 
+import { AdsterraNativeBanner } from '@/components/ads/AdsterraNativeBanner';
+import { AdsterraDisplay } from '@/components/ads/AdsterraDisplay';
+
 export const metadata: Metadata = {
   title: "WeatherAQINow — Weather, AQI & Allergy in One Dashboard",
   description: "Real-time weather, air quality index (AQI), and allergy/pollen data for 60+ US cities.",
@@ -120,6 +123,8 @@ export default async function HomePage({
             ))}
           </div>
         </section>
+      <AdsterraNativeBanner />
+      <AdsterraDisplay />
       </div>
     </>
   );

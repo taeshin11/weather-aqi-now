@@ -1,5 +1,6 @@
 import { getMessages } from "next-intl/server";
 import { getAllCities, getWorstAQICities, getWorstAllergyCities } from "../../lib/cities";
+import { fetchCityWeather } from "../../lib/weather";
 import CityWeatherCard from "../../components/CityWeatherCard";
 import CityTable from "../../components/CityTable";
 import CitySearch from "../../components/CitySearch";
@@ -29,8 +30,27 @@ export default async function HomePage({
   const worstAQI = getWorstAQICities(10);
   const worstAllergy = getWorstAllergyCities(5);
 
-  // Featured cities (first 6)
-  const featuredCities = allCities.slice(0, 6);
+  // Featured cities (first 6) — merge live Open-Meteo data on top of fallback
+  const featuredCities = await Promise.all(
+    allCities.slice(0, 6).map(async (city) => {
+      const live = await fetchCityWeather(city.lat, city.lon);
+      if (!live) return city;
+      return {
+        ...city,
+        temp: live.temp,
+        feelsLike: live.feelsLike,
+        humidity: live.humidity,
+        wind: live.wind,
+        condition: live.condition,
+        aqi: live.aqi,
+        aqiCategory: live.aqiCategory,
+        pm25: live.pm25,
+        pm10: live.pm10,
+        uvIndex: live.uvIndex,
+        forecast: live.forecast,
+      };
+    })
+  );
 
   const schemaOrg = {
     "@context": "https://schema.org",
